@@ -2,25 +2,171 @@
     box-sizing: border-box;
 }
 
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
 .dice {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     height: 6rem;
     width: 6rem;
-    background-color: white;
     border: 3px solid black;
     border-radius: 5px;
-    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 0.5rem;
+    gap: 0.1rem;
+    
 }
 
-.dots-1 aside {
-    grid-column: 2;
-    grid-row: 2;
+.dice aside {
     height: 1.5rem;
     width: 1.5rem;
     background-color: black;
     border-radius: 50%;
-    justify-self: center;
-    align-self: center;
+    display: none;
+}
+
+/* .dice 1 */
+
+.dots-1 aside {
+    grid-area: dots-1;
+    display: block;
+}
+
+/* .dice2 */
+
+.dots-2 aside {
+    grid-area: dots-1;
+    display: block;
+}
+.dots-2 aside:nth-child(1) {
+    grid-area: dots-2;
+    display: block;
+}
+
+/* .dice3  */
+
+.dots-3 aside {
+    grid-area: dots-1;
+    display: block;
+}
+.dots-3 aside:nth-child(1) {
+    grid-area: dots-2;
+    display: block;
+}
+.dots-3 aside:nth-child(2) {
+    grid-area: dots-3;
+    display: block;
+}
+
+/* .dice4  */
+
+.dots-4 aside {
+    grid-area: dots-1;
+    display: block;
+}
+.dots-4 aside:nth-child(1) {
+    grid-area: dots-2;
+    display: block;
+}
+.dots-4 aside:nth-child(2) {
+    grid-area: dots-3;
+    display: block;
+}
+.dots-4 aside:nth-child(3) {
+    grid-area: dots-4;
+    display: block;
+}
+/* .dice5  */
+
+.dots-5 aside {
+    grid-area: dots-1;
+    display: block;
+}
+.dots-5 aside:nth-child(1) {
+    grid-area: dots-2;
+    display: block;
+}
+.dots-5 aside:nth-child(2) {
+    grid-area: dots-3;
+    display: block;
+}
+.dots-5 aside:nth-child(3) {
+    grid-area: dots-4;
+    display: block;
+}
+.dots-5 aside:nth-child(4) {
+    grid-area: dots-5;
+    display: block;
+}
+/* .dice6  */
+
+.dots-6 aside {
+    grid-area: dots-1;
+    display: block;
+}
+.dots-6 aside:nth-child(1) {
+    grid-area: dots-2;
+    display: block;
+}
+.dots-6 aside:nth-child(2) {
+    grid-area: dots-3;
+    display: block;
+}
+.dots-6 aside:nth-child(3) {
+    grid-area: dots-4;
+    display: block;
+}
+.dots-6 aside:nth-child(4) {
+    grid-area: dots-5;
+    display: block;
+}
+.dots-6 aside:nth-child(5) {
+    grid-area: dots-6;
+    display: block;
+}
+
+
+/* .dots  */
+
+.dots-1 {
+    grid-template-areas: 
+    ". . ."
+    ". dots-1 ."
+    ". . .";
+}
+.dots-2 {
+    grid-template-areas: 
+    "dots-1 . ."
+    ". . ."
+    ". . dots-2";
+}
+.dots-3 {
+    grid-template-areas: 
+    "dots-1 . ."
+    ". dots-2 ."
+    ". . dots-3";
+}
+.dots-4 {
+    grid-template-areas: 
+    "dots-1 . dots-3"
+    ". . ."
+    "dots-2 . dots-4";
+}
+.dots-5 {
+    grid-template-areas: 
+    "dots-1 . dots-2"
+    ". dots-3 ."
+    "dots-4 . dots-5";
+}
+.dots-6 {
+    grid-template-areas: 
+    "dots-1 . dots-2"
+    "dots-3 . dots-4"
+    "dots-5 . dots-6";
 }
